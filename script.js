@@ -5,7 +5,7 @@ let regexp =  /\bthe\b|\ban\b|\ba\b/gi;
 
 let articleLessArray = [];
 
-let map = {};  //declaring an object 
+let mp = {};  //declaring an object 
 
 for(let i=0; i<arr.length; i++){
 	let articleLessItem = arr[i].replace(regexp, "").trim(); 
@@ -18,7 +18,7 @@ articleLessArray.sort();
 let ans = [];
 
 for(let i of articleLessArray){
-	ans.push(map[i]);
+	ans.push(mp[i]);
 }
 
 console.log(ans);

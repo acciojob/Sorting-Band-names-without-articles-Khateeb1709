@@ -8,9 +8,12 @@ let articleLessArray = [];
 let mp = {};  //declaring an object 
 
 for(let i=0; i<arr.length; i++){
-	let articleLessItem = arr[i].replace(regexp, "").trim(); 
-	articleLessArray.push(articleLessItem);
-	mp[articleLessItem] = arr[i];
+	let str = arr[i];
+	str = str.replace(regexp, "");
+	str = str.replace(/ +/gi);
+	str = str.trim();
+	articleLessArray.push(str);
+	mp[str] = arr[i];
 }
 
 articleLessArray.sort();
